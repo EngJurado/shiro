@@ -21,6 +21,10 @@ import profileImage from '/src/images/profile.webp';
 
 <div class="container">
     <div class="card-container">
+        <div class="mobile-header">
+            <h1>{name}</h1>
+            <h2>{position}</h2>
+        </div>
         <div class="image">
             <Image 
                 src={profileImage} 
@@ -30,8 +34,10 @@ import profileImage from '/src/images/profile.webp';
             />
         </div>
         <div class="descripcion">
-            <h1>{name}</h1>
-            <h2>{position}</h2>
+            <div class="desktop-header">
+                <h1>{name}</h1>
+                <h2>{position}</h2>
+            </div>
             <p>{aboutMe}</p>
             <div class="icons">
                 <a href={bluesky} class="hover-text" target="_blank">
@@ -173,6 +179,9 @@ import profileImage from '/src/images/profile.webp';
         margin: 0.5rem;
         text-align: center;
     }
+    #header
+    .mobile-header { display: block; }
+    .desktop-header { display: none; }
 
     /* Styles for desktop screens (1024px and up) */
     @media only screen and (min-width: 1024px) {
@@ -182,7 +191,7 @@ import profileImage from '/src/images/profile.webp';
         }
         .card-container {
             flex-direction: row-reverse;
-            width: 75%;
+            width: 60%;
             align-items: center;
         }
         .image, .descripcion{
@@ -197,5 +206,8 @@ import profileImage from '/src/images/profile.webp';
         p {
             font-family: 'Noto Color Emoji', 'Roboto', sans-serif;
         }
+        #header
+        .mobile-header { display: none; }
+        .desktop-header { display: block; }
     }
 </style>
