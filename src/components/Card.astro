@@ -70,6 +70,7 @@ import profileImage from '/src/images/profile.webp';
                     </span>
                     <i class="fa-brands fa-pixiv"></i>
                 </a>
+                <br>
                 <a href={steam} class="hover-text" target="_blank">
                     <span class="tooltip-text" id="fade">
                         Steam
@@ -93,12 +94,6 @@ import profileImage from '/src/images/profile.webp';
     </div>
 </div>
 <style>
-    /* HEADER */
-    .mobile-header { 
-        display: block; 
-        padding-top: 0.75rem;
-    }
-    .desktop-header { display: none; }
     /* CONTAINER */
     .container{
         display: flex;
@@ -117,6 +112,12 @@ import profileImage from '/src/images/profile.webp';
         border-radius: 0.75rem;
         box-shadow: 0.25rem 0.5rem 0.75rem 0.25rem #11111b;
     }
+    /* HEADER */
+    .mobile-header { 
+        display: block; 
+        padding-top: 0.75rem;
+    }
+    .desktop-header { display: none; }
     .image, .descripcion{
         padding: 0.5rem;
     }
@@ -152,6 +153,7 @@ import profileImage from '/src/images/profile.webp';
         padding-right: 0.75rem;
         padding-left: 0.75rem;
     }
+    br { display: block; }
     /* ICONS */
     .icons{
         display: flex;
@@ -160,7 +162,7 @@ import profileImage from '/src/images/profile.webp';
     }
     .icons a{
         color: #cdd6f4;
-        font-size: 1.85rem;
+        font-size: 2.5rem;
         transition: .3s;
     }
     a:hover{
@@ -192,13 +194,13 @@ import profileImage from '/src/images/profile.webp';
 
     /* Styles for desktop screens (1024px and up) */
     @media only screen and (min-width: 1024px) {
-        .mobile-header { display: none; }
-        .desktop-header { display: block; }
         .card-container {
             flex-direction: row-reverse;
             width: 60%;
             align-items: center;
         }
+        .mobile-header { display: none; }
+        .desktop-header { display: block; }
         .image, .descripcion{
             padding: 1rem;
         }
@@ -211,5 +213,6 @@ import profileImage from '/src/images/profile.webp';
         p {
             font-family: 'Noto Color Emoji', 'Roboto', sans-serif;
         }
+        br { display: none; }
     }
 </style>
