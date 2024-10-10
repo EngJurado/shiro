@@ -5,13 +5,15 @@ interface Props {
     aboutMe: string;
     bluesky: string;
     discord: string;
+    instagram: string;
     line: string;
     pixiv: string;
+    steam: string;
     telegram: string;
     twitter: string
 }
 
-const {name, position, aboutMe, bluesky, discord, line, pixiv, telegram, twitter } = Astro.props;
+const {name, position, aboutMe, bluesky, discord, instagram, line, pixiv, steam, telegram, twitter } = Astro.props;
 
 import { Image } from 'astro:assets';	  
 import profileImage from '/src/images/profile.webp';
@@ -44,6 +46,12 @@ import profileImage from '/src/images/profile.webp';
                     </span>
                     <i class="fa-brands fa-discord"></i>
                 </a>
+                <a href={instagram} class="hover-text" target="_blank">
+                    <span class="tooltip-text" id="fade">
+                        Instagram
+                    </span>
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
                 <a href={line} class="hover-text" target="_blank">
                     <span class="tooltip-text" id="fade">
                         Line
@@ -55,6 +63,12 @@ import profileImage from '/src/images/profile.webp';
                         Pixiv
                     </span>
                     <i class="fa-brands fa-pixiv"></i>
+                </a>
+                <a href={steam} class="hover-text" target="_blank">
+                    <span class="tooltip-text" id="fade">
+                        Steam
+                    </span>
+                    <i class="fa-brands fa-steam"></i>
                 </a>
                 <a href={telegram} class="hover-text" target="_blank">
                     <span class="tooltip-text" id="fade">
@@ -130,7 +144,7 @@ import profileImage from '/src/images/profile.webp';
     }
     .icons a{
         color: #cdd6f4;
-        font-size: 2.5rem;
+        font-size: 1.85rem;
         transition: .3s;
     }
     a:hover{
