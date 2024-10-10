@@ -70,7 +70,6 @@ import profileImage from '/src/images/profile.webp';
                     </span>
                     <i class="fa-brands fa-pixiv"></i>
                 </a>
-                <br>
                 <a href={steam} class="hover-text" target="_blank">
                     <span class="tooltip-text" id="fade">
                         Steam
@@ -153,12 +152,12 @@ import profileImage from '/src/images/profile.webp';
         padding-right: 0.75rem;
         padding-left: 0.75rem;
     }
-    br { display: block; }
     /* ICONS */
     .icons{
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
     }
     .icons a{
         color: #cdd6f4;
@@ -213,6 +212,5 @@ import profileImage from '/src/images/profile.webp';
         p {
             font-family: 'Noto Color Emoji', 'Roboto', sans-serif;
         }
-        br { display: none; }
     }
 </style>
